@@ -16,7 +16,7 @@
         <v-form ref="form">
           <v-card class="pa-3" min-width="400" outline>
             <v-file-input counter truncate-length="15"></v-file-input>
-            <v-btn color="success" class="mr-4" @click="validate">
+            <v-btn color="success" class="mr-4" @click.prevent="submit">
               Submit
             </v-btn>
           </v-card>
@@ -35,5 +35,11 @@ export default {
   components: {},
 
   data: () => ({ drawer: false }),
+
+  methods: {
+    submit() {
+      console.log('Submit that sheiiit')
+    }
+  }
 };
 </script>
